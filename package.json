@@ -1,0 +1,11 @@
+{
+  "name": "sample-react-browserify-firebase-example",
+  "version": "0.0.1",
+  "description": "another proof of concept",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": ["react","browserify","firebase"],
+  "author": "Sombriks <sombriks@gmail.com>",
+  "license": "MIT"
+}
