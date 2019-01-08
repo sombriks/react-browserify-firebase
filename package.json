@@ -4,8 +4,43 @@
   "description": "another proof of concept",
   "main": "index.js",
   "scripts": {
+    "dev": "budo -o -l -H 127.0.0.1 src/main.jsx:build.js",
+    "build":"browserify -p tinyify src/main.jsx -o public/build.js ; cp index.html public/index.html",
+    "release":"npm run build ; firebase deploy"
   },
-  "keywords": ["react","browserify","firebase"],
+  "keywords": [
+    "react",
+    "browserify",
+    "firebase"
+  ],
   "author": "Sombriks <sombriks@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "budo": "^10.0.4",
+    "browserify": "^13.1.0",
+    "browserify-css": "^0.11.0",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babelify": "^10.0.0",
+    "tinyify": "^2.5.0"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env",
+            "@babel/preset-react"
+          ]
+        },
+        "browserify-css"
+      ]
+    ]
+  }
 }
