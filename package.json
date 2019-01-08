@@ -1,5 +1,5 @@
 {
-  "name": "sample-react-browserify-firebase-example",
+  "name": "react-browserify-firebase",
   "version": "0.0.1",
   "description": "another proof of concept",
   "main": "index.js",
